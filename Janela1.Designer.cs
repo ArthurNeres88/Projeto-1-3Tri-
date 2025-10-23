@@ -36,14 +36,14 @@
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(792, 439);
+            panel1.Size = new Size(467, 454);
             panel1.TabIndex = 0;
             // 
             // Janela1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(816, 463);
+            ClientSize = new Size(491, 478);
             Controls.Add(panel1);
             Name = "Janela1";
             Text = "Cadastro";
