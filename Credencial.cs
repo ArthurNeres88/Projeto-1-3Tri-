@@ -8,5 +8,6 @@ namespace Trabalho1_ProgVis
 {
     public class Credencial
     {
+
     }
 }
