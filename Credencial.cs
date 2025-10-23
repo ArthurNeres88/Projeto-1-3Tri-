@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Trabalho1_ProgVis
 {
-    internal class Credencial
+    public class Credencial
     {
+
     }
 }
