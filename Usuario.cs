@@ -13,10 +13,17 @@ namespace Trabalho1_ProgVis
     {
         [Key]
         public Int64  Id        { get; set; }
+        
         [Required]
         [StringLength(45)]
         public String? Nome     { get; set; }
+        
+        [Required]
+        [StringLength(11)]
         public String? Telefone { get; set; }
+        
+        [Required]
+        [StringLength(35)]
         public String? Email    { get; set; }
     }
 }
