@@ -35,6 +35,32 @@ namespace Trabalho1_ProgVis
 
         public bool Administrador { get; set; }
 
-      
+        [Required]
+        public Usuario Usuario { get; set; }
+
+        #region Hashing
+        public static String ComputeSHA256(String input)
+        {
+            return ComputeSHA256(input, null);
+        }
+
+        public static String ComputeSHA256(String input, String salt)
+        {
+            String hash = String.Empty;
+
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] hashValue = sha256.ComputeHash(
+                    Encoding.UTF8.GetBytes(salt + input));
+
+                foreach (byte b in hashValue)
+                {
+                    hash += $"{b:X2}";
+                }
+            }
+
+            return hash;
+        }
+        #endregion
     }
 }
