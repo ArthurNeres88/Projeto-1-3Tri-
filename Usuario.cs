@@ -25,5 +25,13 @@ namespace Trabalho1_ProgVis
         [Required]
         [StringLength(35)]
         public String? Email    { get; set; }
+
+        public override string ToString()
+        {
+            return Id
+                + " - " + Nome
+                + " - " + Telefone
+                + " - " + Email;
+        }
     }
 }
