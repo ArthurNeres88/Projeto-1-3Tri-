@@ -54,9 +54,32 @@ namespace Trabalho1_ProgVis
             try
             {
                 using (Repository dbContext = new Repository())
+                {
+                    return dbContext.Usuarios.Find(id);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
 
+        public static void Remove(Usuario usuario)
+        {
+            try
+            {
+                using (Repository dbContext = new Repository())
+                {
+                    dbContext.Usuarios.Attach(usuario);
+                    dbContext.Usuarios.Remove(usuario);
 
+                    dbContext.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

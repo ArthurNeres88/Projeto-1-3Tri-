@@ -26,12 +26,15 @@ namespace Trabalho1_ProgVis
         [StringLength(35)]
         public String? Email    { get; set; }
 
+        public Credencial Credencial { get; set; }
+
         public override string ToString()
         {
             return Id
                 + " - " + Nome
                 + " - " + Telefone
-                + " - " + Email;
+                + " - " + Email
+                + " - " + Credencial;
         }
     }
 }
