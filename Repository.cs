@@ -17,5 +17,13 @@ namespace Trabalho1_ProgVis
 
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Credencial> Credenciais { get; set; }
+
+        public Repository() => this.Database.EnsureCreated();
+
+        protected override void onConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+            optionsBuilder.UseMySQL(_connectionParams);
+        }
     }
 }
