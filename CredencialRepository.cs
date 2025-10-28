@@ -66,5 +66,20 @@ namespace Trabalho1_ProgVis
                 throw;
             }
         }
+
+        public static Credencial FindById(Int64 Id)
+        {
+            try
+            {
+                using (Repository dbContext = new Repository())
+                {
+                    return dbContext.Credenciais.Find(Id);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }
