@@ -20,7 +20,7 @@ namespace Trabalho1_ProgVis
 
         public Repository() => this.Database.EnsureCreated();
 
-        protected override void onConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseMySQL(_connectionParams);

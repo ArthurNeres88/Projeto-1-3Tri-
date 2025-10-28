@@ -1,8 +1,9 @@
-﻿]using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Trabalho1_ProgVis
 {
@@ -10,12 +11,52 @@ namespace Trabalho1_ProgVis
     {
         public void SaveOrUpdate(Usuario usuario)
         {
-            using (Repository dbContext = new())
+            try
             {
-                if (usuario.Id == 0)
+                using (Repository dbContext = new Repository())
                 {
+                    if (usuario.Id == 0)
+                    {
+                        dbContext.Usuarios.Add(usuario);
+                    }
+                    else
+                    {
+                        dbContext.Entry(usuario).State
+                            = EntityState.Modified;
+                    }
 
+                    dbContext.SaveChanges();
                 }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
+
+        public static List<Usuario> FindAll()
+        {
+            try
+            {
+                using (Repository dbContext = new Repository())
+                {
+                    return dbContext.Usuarios.ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static Usuario FindById(Int64 id)
+        {
+            try
+            {
+                using (Repository dbContext = new Repository())
+            }
+        }
+
+
     }
 }
