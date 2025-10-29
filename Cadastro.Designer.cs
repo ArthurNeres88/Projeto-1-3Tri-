@@ -1,6 +1,6 @@
 ﻿namespace Trabalho1_ProgVis
 {
-    partial class Janela1
+    partial class Cadastro
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,24 +29,27 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            maskedTextBox1 = new MaskedTextBox();
+            chkPerfil = new CheckBox();
+            lblSenha = new Label();
+            txtSenha = new TextBox();
             lblNomeUsuario = new Label();
             txtNomeUsuario = new TextBox();
             lblTelefone = new Label();
             lblEmail = new Label();
             lblNome = new Label();
-            txtTelefone = new TextBox();
             txtNome = new TextBox();
             txtEmail = new TextBox();
             btnCadastrar = new Button();
-            lblSenha = new Label();
-            txtSenha = new TextBox();
-            chkPerfil = new CheckBox();
+            label1 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(maskedTextBox1);
             panel1.Controls.Add(chkPerfil);
             panel1.Controls.Add(lblSenha);
             panel1.Controls.Add(txtSenha);
@@ -55,7 +58,6 @@
             panel1.Controls.Add(lblTelefone);
             panel1.Controls.Add(lblEmail);
             panel1.Controls.Add(lblNome);
-            panel1.Controls.Add(txtTelefone);
             panel1.Controls.Add(txtNome);
             panel1.Controls.Add(txtEmail);
             panel1.Controls.Add(btnCadastrar);
@@ -63,6 +65,42 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(355, 408);
             panel1.TabIndex = 0;
+            // 
+            // maskedTextBox1
+            // 
+            maskedTextBox1.Font = new Font("Segoe UI", 14F);
+            maskedTextBox1.Location = new Point(8, 206);
+            maskedTextBox1.Mask = "(00) 00000-0000";
+            maskedTextBox1.Name = "maskedTextBox1";
+            maskedTextBox1.Size = new Size(335, 32);
+            maskedTextBox1.TabIndex = 12;
+            // 
+            // chkPerfil
+            // 
+            chkPerfil.AutoSize = true;
+            chkPerfil.Location = new Point(8, 305);
+            chkPerfil.Name = "chkPerfil";
+            chkPerfil.Size = new Size(67, 19);
+            chkPerfil.TabIndex = 11;
+            chkPerfil.Text = "Gerente";
+            chkPerfil.UseVisualStyleBackColor = true;
+            // 
+            // lblSenha
+            // 
+            lblSenha.AutoSize = true;
+            lblSenha.Location = new Point(8, 248);
+            lblSenha.Name = "lblSenha";
+            lblSenha.Size = new Size(39, 15);
+            lblSenha.TabIndex = 10;
+            lblSenha.Text = "Senha";
+            // 
+            // txtSenha
+            // 
+            txtSenha.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtSenha.Location = new Point(8, 266);
+            txtSenha.Name = "txtSenha";
+            txtSenha.Size = new Size(335, 33);
+            txtSenha.TabIndex = 9;
             // 
             // lblNomeUsuario
             // 
@@ -108,14 +146,6 @@
             lblNome.TabIndex = 4;
             lblNome.Text = "Nome\r\n";
             // 
-            // txtTelefone
-            // 
-            txtTelefone.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtTelefone.Location = new Point(8, 206);
-            txtTelefone.Name = "txtTelefone";
-            txtTelefone.Size = new Size(335, 33);
-            txtTelefone.TabIndex = 3;
-            // 
             // txtNome
             // 
             txtNome.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -144,40 +174,26 @@
             btnCadastrar.Text = "Cadastrar";
             btnCadastrar.UseVisualStyleBackColor = false;
             // 
-            // lblSenha
+            // label1
             // 
-            lblSenha.AutoSize = true;
-            lblSenha.Location = new Point(8, 248);
-            lblSenha.Name = "lblSenha";
-            lblSenha.Size = new Size(39, 15);
-            lblSenha.TabIndex = 10;
-            lblSenha.Text = "Senha";
+            label1.AutoSize = true;
+            label1.BackColor = Color.Yellow;
+            label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Red;
+            label1.Location = new Point(4, 331);
+            label1.Name = "label1";
+            label1.Size = new Size(217, 20);
+            label1.TabIndex = 13;
+            label1.Text = "Os campos estão incompletos";
+            label1.Visible = false;
             // 
-            // txtSenha
-            // 
-            txtSenha.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtSenha.Location = new Point(8, 266);
-            txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(335, 33);
-            txtSenha.TabIndex = 9;
-            // 
-            // chkPerfil
-            // 
-            chkPerfil.AutoSize = true;
-            chkPerfil.Location = new Point(8, 305);
-            chkPerfil.Name = "chkPerfil";
-            chkPerfil.Size = new Size(67, 19);
-            chkPerfil.TabIndex = 11;
-            chkPerfil.Text = "Gerente";
-            chkPerfil.UseVisualStyleBackColor = true;
-            // 
-            // Janela1
+            // Cadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(363, 412);
             Controls.Add(panel1);
-            Name = "Janela1";
+            Name = "Cadastro";
             Text = "Cadastro";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -188,7 +204,6 @@
 
         private Panel panel1;
         private Button btnCadastrar;
-        private TextBox txtTelefone;
         private TextBox txtNome;
         private TextBox txtEmail;
         private Label lblTelefone;
@@ -199,5 +214,7 @@
         private Label lblSenha;
         private TextBox txtSenha;
         private CheckBox chkPerfil;
+        private MaskedTextBox maskedTextBox1;
+        private Label label1;
     }
 }

@@ -1,10 +1,12 @@
 namespace Trabalho1_ProgVis
 {
-    public partial class Janela1 : Form
+    public partial class Cadastro : Form
     {
-        public Janela1()
+        public Cadastro()
         {
             InitializeComponent();
         }
+
+       
     }
 }

@@ -19,7 +19,7 @@ namespace Trabalho1_ProgVis
         public String? Nome { get; set; }
         
         [Required]
-        [StringLength(11)]
+        [StringLength(15)]
         public String? Telefone { get; set; }
         
         [Required]

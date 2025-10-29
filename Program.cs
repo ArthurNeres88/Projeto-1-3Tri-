@@ -10,15 +10,23 @@ namespace Trabalho1_ProgVis
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
-            Usuario admin = new Usuario()
+            Credencial adminCredencial = new Credencial()
+            {
+                NomeUsuario = "Admin",
+                Senha = "Senha",
+                Administrador = true,
+            };
+            Usuario adminUsuario = new Usuario()
             {
                 Nome = "Admin",
                 Telefone = "12345678911",
                 Email = "admin@gmail.com",
-                Credencial = 
+                Credencial = adminCredencial
             };
+
+
             ApplicationConfiguration.Initialize();
-            Application.Run(new Janela1());
+            Application.Run(new Cadastro());
 
         }
     }
