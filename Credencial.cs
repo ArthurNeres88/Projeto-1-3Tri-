@@ -17,6 +17,8 @@ namespace Trabalho1_ProgVis
 
         public const String SALT = "1FnM6_";
 
+        public String NomeUsuario { get; set; }
+        
         private String _senha;
 
         [Required]

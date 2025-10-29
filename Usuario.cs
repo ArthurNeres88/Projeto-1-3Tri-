@@ -12,11 +12,11 @@ namespace Trabalho1_ProgVis
     public class Usuario
     {
         [Key]
-        public Int64  Id        { get; set; }
+        public Int64  Id { get; set; }
         
         [Required]
         [StringLength(45)]
-        public String? Nome     { get; set; }
+        public String? Nome { get; set; }
         
         [Required]
         [StringLength(11)]
@@ -24,8 +24,10 @@ namespace Trabalho1_ProgVis
         
         [Required]
         [StringLength(35)]
-        public String? Email    { get; set; }
+        public String? Email { get; set; }
 
+        [Required]
+        [ForeignKey("Credencial")]
         public Credencial Credencial { get; set; }
 
         public override string ToString()
