@@ -26,6 +26,6 @@ namespace Trabalho1_ProgVis
             optionsBuilder.UseMySQL(_connectionParams);
         }
 
-        protected override void OnModelCreating
+        
     }
 }
