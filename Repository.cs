@@ -25,5 +25,7 @@ namespace Trabalho1_ProgVis
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseMySQL(_connectionParams);
         }
+
+        
     }
 }
