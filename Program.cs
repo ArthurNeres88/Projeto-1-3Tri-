@@ -19,7 +19,7 @@ namespace Trabalho1_ProgVis
             {
                 NomeUsuario = "Admin",
                 Senha = "Senha",
-                Administrador = true,
+                Administrador = true
             };
             Usuario adminUsuario = new Usuario()
             {
@@ -31,11 +31,11 @@ namespace Trabalho1_ProgVis
 
             UsuarioRepository.SaveOrUpdate(adminUsuario);
 
-            ApplicationConfiguration.Initialize();
-            Application.Run(Sistema.GetInstance());
-
             }
 
+
+            ApplicationConfiguration.Initialize();
+            Application.Run(Sistema.GetInstance());
             
 
         }

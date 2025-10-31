@@ -27,7 +27,7 @@ namespace Trabalho1_ProgVis
         public String? Email { get; set; }
 
         [ForeignKey("credencial_id")]
-        public Int64 Credencial { get; set; }
+        public Credencial Credencial { get; set; }
 
 
         public override string ToString()
