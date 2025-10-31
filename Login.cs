@@ -17,14 +17,7 @@ namespace Trabalho1_ProgVis
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void lblSemConta_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

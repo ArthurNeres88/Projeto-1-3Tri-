@@ -30,8 +30,6 @@
         {
             panel1 = new Panel();
             btnEntrar = new Button();
-            linkLabel1 = new LinkLabel();
-            lblSemConta = new Label();
             lblSenha = new Label();
             lblNomeUsuario = new Label();
             txtSenha = new TextBox();
@@ -44,8 +42,6 @@
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.Controls.Add(btnEntrar);
-            panel1.Controls.Add(linkLabel1);
-            panel1.Controls.Add(lblSemConta);
             panel1.Controls.Add(lblSenha);
             panel1.Controls.Add(lblNomeUsuario);
             panel1.Controls.Add(txtSenha);
@@ -68,28 +64,6 @@
             btnEntrar.Text = "Entrar";
             btnEntrar.UseVisualStyleBackColor = false;
             // 
-            // linkLabel1
-            // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            linkLabel1.Location = new Point(210, 402);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(73, 17);
-            linkLabel1.TabIndex = 6;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Clique aqui";
-            // 
-            // lblSemConta
-            // 
-            lblSemConta.AutoSize = true;
-            lblSemConta.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSemConta.Location = new Point(83, 402);
-            lblSemConta.Name = "lblSemConta";
-            lblSemConta.Size = new Size(130, 17);
-            lblSemConta.TabIndex = 5;
-            lblSemConta.Text = "Não tem uma conta?";
-            lblSemConta.Click += lblSemConta_Click;
-            // 
             // lblSenha
             // 
             lblSenha.AutoSize = true;
@@ -99,7 +73,6 @@
             lblSenha.Size = new Size(49, 20);
             lblSenha.TabIndex = 4;
             lblSenha.Text = "Senha";
-            lblSenha.Click += label2_Click;
             // 
             // lblNomeUsuario
             // 
@@ -158,8 +131,6 @@
         private Label lblBemVindoDeVolta;
         private Label lblSenha;
         private Label lblNomeUsuario;
-        private LinkLabel linkLabel1;
-        private Label lblSemConta;
         private Button btnEntrar;
     }
 }

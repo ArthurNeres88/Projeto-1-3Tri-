@@ -1,6 +1,6 @@
 ﻿namespace Trabalho1_ProgVis
 {
-    partial class ListaUsuarios
+    partial class Sistema
     {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +36,10 @@
             toolStripMenuItem1 = new ToolStripMenuItem();
             mnuAjuda = new ToolStripMenuItem();
             mnuAjudaSobre = new ToolStripMenuItem();
+            staBarraEstado = new StatusStrip();
+            staBarraEstadoUltimoAcesso = new ToolStripStatusLabel();
             menuStrip1.SuspendLayout();
+            staBarraEstado.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -59,7 +62,7 @@
             // mnuArquivoSair
             // 
             mnuArquivoSair.Name = "mnuArquivoSair";
-            mnuArquivoSair.Size = new Size(180, 22);
+            mnuArquivoSair.Size = new Size(93, 22);
             mnuArquivoSair.Text = "Sair";
             // 
             // mnuCadastro
@@ -72,7 +75,7 @@
             // mnuCadastroUsuario
             // 
             mnuCadastroUsuario.Name = "mnuCadastroUsuario";
-            mnuCadastroUsuario.Size = new Size(180, 22);
+            mnuCadastroUsuario.Size = new Size(114, 22);
             mnuCadastroUsuario.Text = "Usuário";
             // 
             // toolStripMenuItem1
@@ -90,20 +93,38 @@
             // mnuAjudaSobre
             // 
             mnuAjudaSobre.Name = "mnuAjudaSobre";
-            mnuAjudaSobre.Size = new Size(180, 22);
+            mnuAjudaSobre.Size = new Size(104, 22);
             mnuAjudaSobre.Text = "Sobre";
             // 
-            // ListaUsuarios
+            // staBarraEstado
+            // 
+            staBarraEstado.Items.AddRange(new ToolStripItem[] { staBarraEstadoUltimoAcesso });
+            staBarraEstado.Location = new Point(0, 428);
+            staBarraEstado.Name = "staBarraEstado";
+            staBarraEstado.Size = new Size(800, 22);
+            staBarraEstado.TabIndex = 1;
+            staBarraEstado.Text = "statusStrip1";
+            // 
+            // staBarraEstadoUltimoAcesso
+            // 
+            staBarraEstadoUltimoAcesso.Name = "staBarraEstadoUltimoAcesso";
+            staBarraEstadoUltimoAcesso.Size = new Size(118, 17);
+            staBarraEstadoUltimoAcesso.Text = "toolStripStatusLabel1";
+            // 
+            // Sistema
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(staBarraEstado);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Name = "ListaUsuarios";
-            Text = "ListaUsuarios";
+            Name = "Sistema";
+            Text = "Sistema";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            staBarraEstado.ResumeLayout(false);
+            staBarraEstado.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -118,5 +139,7 @@
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem mnuAjuda;
         private ToolStripMenuItem mnuAjudaSobre;
+        private StatusStrip staBarraEstado;
+        private ToolStripStatusLabel staBarraEstadoUltimoAcesso;
     }
 }

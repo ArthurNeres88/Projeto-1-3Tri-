@@ -37,7 +37,7 @@ namespace Trabalho1_ProgVis
 
         public bool Administrador { get; set; }
 
-        [Required]
+
         public Usuario Usuario { get; set; }
 
         #region Hashing

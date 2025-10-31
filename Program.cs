@@ -10,6 +10,11 @@ namespace Trabalho1_ProgVis
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
+            
+            if (UsuarioRepository.FindById(1) == null)
+            {
+
+            
             Credencial adminCredencial = new Credencial()
             {
                 NomeUsuario = "Admin",
@@ -24,9 +29,14 @@ namespace Trabalho1_ProgVis
                 Credencial = adminCredencial
             };
 
+            UsuarioRepository.SaveOrUpdate(adminUsuario);
 
             ApplicationConfiguration.Initialize();
-            Application.Run(new Cadastro());
+            Application.Run(Sistema.GetInstance());
+
+            }
+
+            
 
         }
     }

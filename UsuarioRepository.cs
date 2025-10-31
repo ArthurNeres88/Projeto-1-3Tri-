@@ -9,7 +9,7 @@ namespace Trabalho1_ProgVis
 {
     public class UsuarioRepository
     {
-        public void SaveOrUpdate(Usuario usuario)
+        public static void SaveOrUpdate(Usuario usuario)
         {
             try
             {

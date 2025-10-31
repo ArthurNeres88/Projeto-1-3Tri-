@@ -26,9 +26,9 @@ namespace Trabalho1_ProgVis
         [StringLength(35)]
         public String? Email { get; set; }
 
-        [Required]
-        [ForeignKey("Credencial")]
-        public Credencial Credencial { get; set; }
+        [ForeignKey("credencial_id")]
+        public Int64 Credencial { get; set; }
+
 
         public override string ToString()
         {
