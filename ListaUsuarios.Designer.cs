@@ -1,14 +1,14 @@
 ﻿namespace Trabalho1_ProgVis
 {
-    partial class Cadastro
+    partial class ListaUsuarios
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,13 +23,13 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            label1 = new Label();
+            pnlListaUsuarios = new Panel();
+            lstUsuarios = new ListBox();
             maskedTextBox1 = new MaskedTextBox();
             chkPerfil = new CheckBox();
             lblSenha = new Label();
@@ -41,180 +41,163 @@
             lblNome = new Label();
             txtNome = new TextBox();
             txtEmail = new TextBox();
-            btnCadastrar = new Button();
-            panel1.SuspendLayout();
+            pnlListaUsuarios.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // pnlListaUsuarios
             // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(maskedTextBox1);
-            panel1.Controls.Add(chkPerfil);
-            panel1.Controls.Add(lblSenha);
-            panel1.Controls.Add(txtSenha);
-            panel1.Controls.Add(lblNomeUsuario);
-            panel1.Controls.Add(txtNomeUsuario);
-            panel1.Controls.Add(lblTelefone);
-            panel1.Controls.Add(lblEmail);
-            panel1.Controls.Add(lblNome);
-            panel1.Controls.Add(txtNome);
-            panel1.Controls.Add(txtEmail);
-            panel1.Controls.Add(btnCadastrar);
-            panel1.Location = new Point(4, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(355, 408);
-            panel1.TabIndex = 0;
+            pnlListaUsuarios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pnlListaUsuarios.Controls.Add(maskedTextBox1);
+            pnlListaUsuarios.Controls.Add(lstUsuarios);
+            pnlListaUsuarios.Controls.Add(chkPerfil);
+            pnlListaUsuarios.Controls.Add(txtNome);
+            pnlListaUsuarios.Controls.Add(lblSenha);
+            pnlListaUsuarios.Controls.Add(txtEmail);
+            pnlListaUsuarios.Controls.Add(txtSenha);
+            pnlListaUsuarios.Controls.Add(lblNome);
+            pnlListaUsuarios.Controls.Add(lblNomeUsuario);
+            pnlListaUsuarios.Controls.Add(lblEmail);
+            pnlListaUsuarios.Controls.Add(txtNomeUsuario);
+            pnlListaUsuarios.Controls.Add(lblTelefone);
+            pnlListaUsuarios.Location = new Point(12, 12);
+            pnlListaUsuarios.Name = "pnlListaUsuarios";
+            pnlListaUsuarios.Size = new Size(606, 341);
+            pnlListaUsuarios.TabIndex = 0;
             // 
-            // label1
+            // lstUsuarios
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Yellow;
-            label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Red;
-            label1.Location = new Point(4, 331);
-            label1.Name = "label1";
-            label1.Size = new Size(217, 20);
-            label1.TabIndex = 13;
-            label1.Text = "Os campos estão incompletos";
-            label1.Visible = false;
+            lstUsuarios.BackColor = Color.FromArgb(128, 128, 255);
+            lstUsuarios.FormattingEnabled = true;
+            lstUsuarios.ItemHeight = 15;
+            lstUsuarios.Location = new Point(3, 3);
+            lstUsuarios.Name = "lstUsuarios";
+            lstUsuarios.Size = new Size(245, 304);
+            lstUsuarios.TabIndex = 0;
+            lstUsuarios.Tag = "Lista de Usuários";
             // 
             // maskedTextBox1
             // 
             maskedTextBox1.Font = new Font("Segoe UI", 14F);
-            maskedTextBox1.Location = new Point(8, 206);
+            maskedTextBox1.Location = new Point(254, 197);
             maskedTextBox1.Mask = "(00) 00000-0000";
             maskedTextBox1.Name = "maskedTextBox1";
             maskedTextBox1.Size = new Size(335, 32);
-            maskedTextBox1.TabIndex = 12;
+            maskedTextBox1.TabIndex = 23;
             // 
             // chkPerfil
             // 
             chkPerfil.AutoSize = true;
-            chkPerfil.Location = new Point(8, 305);
+            chkPerfil.Location = new Point(254, 296);
             chkPerfil.Name = "chkPerfil";
             chkPerfil.Size = new Size(67, 19);
-            chkPerfil.TabIndex = 11;
+            chkPerfil.TabIndex = 22;
             chkPerfil.Text = "Gerente";
             chkPerfil.UseVisualStyleBackColor = true;
             // 
             // lblSenha
             // 
             lblSenha.AutoSize = true;
-            lblSenha.Location = new Point(8, 248);
+            lblSenha.Location = new Point(254, 239);
             lblSenha.Name = "lblSenha";
             lblSenha.Size = new Size(39, 15);
-            lblSenha.TabIndex = 10;
+            lblSenha.TabIndex = 21;
             lblSenha.Text = "Senha";
             // 
             // txtSenha
             // 
             txtSenha.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtSenha.Location = new Point(8, 266);
+            txtSenha.Location = new Point(254, 257);
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(335, 33);
-            txtSenha.TabIndex = 9;
+            txtSenha.TabIndex = 20;
             // 
             // lblNomeUsuario
             // 
             lblNomeUsuario.AutoSize = true;
-            lblNomeUsuario.Location = new Point(4, 69);
+            lblNomeUsuario.Location = new Point(250, 60);
             lblNomeUsuario.Name = "lblNomeUsuario";
             lblNomeUsuario.Size = new Size(99, 15);
-            lblNomeUsuario.TabIndex = 8;
+            lblNomeUsuario.TabIndex = 19;
             lblNomeUsuario.Text = "Nome de Usuário";
             // 
             // txtNomeUsuario
             // 
             txtNomeUsuario.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNomeUsuario.Location = new Point(8, 87);
+            txtNomeUsuario.Location = new Point(254, 78);
             txtNomeUsuario.Name = "txtNomeUsuario";
             txtNomeUsuario.Size = new Size(335, 33);
-            txtNomeUsuario.TabIndex = 7;
+            txtNomeUsuario.TabIndex = 18;
             // 
             // lblTelefone
             // 
             lblTelefone.AutoSize = true;
-            lblTelefone.Location = new Point(8, 188);
+            lblTelefone.Location = new Point(254, 179);
             lblTelefone.Name = "lblTelefone";
             lblTelefone.Size = new Size(52, 15);
-            lblTelefone.TabIndex = 6;
+            lblTelefone.TabIndex = 17;
             lblTelefone.Text = "Telefone";
             // 
             // lblEmail
             // 
             lblEmail.AutoSize = true;
-            lblEmail.Location = new Point(8, 132);
+            lblEmail.Location = new Point(254, 123);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(36, 15);
-            lblEmail.TabIndex = 5;
+            lblEmail.TabIndex = 16;
             lblEmail.Text = "Email";
             // 
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.Location = new Point(4, 15);
+            lblNome.Location = new Point(250, 6);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(40, 15);
-            lblNome.TabIndex = 4;
+            lblNome.TabIndex = 15;
             lblNome.Text = "Nome\r\n";
             // 
             // txtNome
             // 
             txtNome.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNome.Location = new Point(8, 33);
+            txtNome.Location = new Point(254, 24);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(335, 33);
-            txtNome.TabIndex = 2;
+            txtNome.TabIndex = 14;
             // 
             // txtEmail
             // 
             txtEmail.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtEmail.Location = new Point(8, 150);
+            txtEmail.Location = new Point(254, 141);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(335, 33);
-            txtEmail.TabIndex = 1;
+            txtEmail.TabIndex = 13;
             // 
-            // btnCadastrar
-            // 
-            btnCadastrar.BackColor = SystemColors.MenuHighlight;
-            btnCadastrar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCadastrar.ForeColor = SystemColors.ButtonHighlight;
-            btnCadastrar.Location = new Point(174, 354);
-            btnCadastrar.Name = "btnCadastrar";
-            btnCadastrar.Size = new Size(169, 43);
-            btnCadastrar.TabIndex = 0;
-            btnCadastrar.Text = "Cadastrar";
-            btnCadastrar.UseVisualStyleBackColor = false;
-            // 
-            // Cadastro
+            // ListaUsuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(363, 412);
-            Controls.Add(panel1);
-            Name = "Cadastro";
-            Text = "Cadastro";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            ClientSize = new Size(630, 365);
+            Controls.Add(pnlListaUsuarios);
+            Name = "ListaUsuarios";
+            Text = "ListaUsuarios";
+            pnlListaUsuarios.ResumeLayout(false);
+            pnlListaUsuarios.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
-        private Button btnCadastrar;
+        private Panel pnlListaUsuarios;
+        private ListBox lstUsuarios;
+        private MaskedTextBox maskedTextBox1;
+        private CheckBox chkPerfil;
         private TextBox txtNome;
+        private Label lblSenha;
         private TextBox txtEmail;
-        private Label lblTelefone;
-        private Label lblEmail;
+        private TextBox txtSenha;
         private Label lblNome;
         private Label lblNomeUsuario;
+        private Label lblEmail;
         private TextBox txtNomeUsuario;
-        private Label lblSenha;
-        private TextBox txtSenha;
-        private CheckBox chkPerfil;
-        private MaskedTextBox maskedTextBox1;
-        private Label label1;
+        private Label lblTelefone;
     }
 }

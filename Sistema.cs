@@ -21,8 +21,8 @@ namespace Trabalho1_ProgVis
             if (_instance == null || _instance.IsDisposed)
             {
                 _instance = new Sistema();
-            }        
-            
+            }
+
             return _instance;
         }
         #endregion
@@ -34,6 +34,39 @@ namespace Trabalho1_ProgVis
 
         }
 
+        private void mnuArquivoSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
 
+        private void mnuCadastroUsuario_Click(object sender, EventArgs e)
+        {
+            Cadastro cadastro = Cadastro.GetInstance();
+            cadastro.MdiParent = this;
+            cadastro.BringToFront();
+            cadastro.WindowState = FormWindowState.Normal;
+
+            cadastro.Show();
+        }
+
+        private void mnuAjudaSobre_Click(object sender, EventArgs e)
+        {
+            Sobre sobre = Sobre.GetInstance();
+            sobre.MdiParent = this;
+            sobre.BringToFront();
+            sobre.WindowState = FormWindowState.Normal;
+
+            sobre.Show();
+        }
+
+        private void mnuRelatorioUsuarios_Click(object sender, EventArgs e)
+        {
+            ListaUsuarios listaUsuarios = ListaUsuarios.GetInstance();
+            listaUsuarios.MdiParent = this;
+            listaUsuarios.BringToFront();
+            listaUsuarios.WindowState = FormWindowState.Normal;
+
+            listaUsuarios.Show();
+        }
     }
 }

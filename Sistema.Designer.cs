@@ -33,7 +33,8 @@
             mnuArquivoSair = new ToolStripMenuItem();
             mnuCadastro = new ToolStripMenuItem();
             mnuCadastroUsuario = new ToolStripMenuItem();
-            toolStripMenuItem1 = new ToolStripMenuItem();
+            mnuRelatorio = new ToolStripMenuItem();
+            mnuRelatorioUsuarios = new ToolStripMenuItem();
             mnuAjuda = new ToolStripMenuItem();
             mnuAjudaSobre = new ToolStripMenuItem();
             staBarraEstado = new StatusStrip();
@@ -45,7 +46,7 @@
             // menuStrip1
             // 
             menuStrip1.BackColor = SystemColors.MenuHighlight;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { mnuArquivo, mnuCadastro, toolStripMenuItem1, mnuAjuda });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { mnuArquivo, mnuCadastro, mnuRelatorio, mnuAjuda });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -64,6 +65,7 @@
             mnuArquivoSair.Name = "mnuArquivoSair";
             mnuArquivoSair.Size = new Size(93, 22);
             mnuArquivoSair.Text = "Sair";
+            mnuArquivoSair.Click += mnuArquivoSair_Click;
             // 
             // mnuCadastro
             // 
@@ -77,11 +79,21 @@
             mnuCadastroUsuario.Name = "mnuCadastroUsuario";
             mnuCadastroUsuario.Size = new Size(114, 22);
             mnuCadastroUsuario.Text = "Usuário";
+            mnuCadastroUsuario.Click += mnuCadastroUsuario_Click;
             // 
-            // toolStripMenuItem1
+            // mnuRelatorio
             // 
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(12, 20);
+            mnuRelatorio.DropDownItems.AddRange(new ToolStripItem[] { mnuRelatorioUsuarios });
+            mnuRelatorio.Name = "mnuRelatorio";
+            mnuRelatorio.Size = new Size(66, 20);
+            mnuRelatorio.Text = "Relatório";
+            // 
+            // mnuRelatorioUsuarios
+            // 
+            mnuRelatorioUsuarios.Name = "mnuRelatorioUsuarios";
+            mnuRelatorioUsuarios.Size = new Size(180, 22);
+            mnuRelatorioUsuarios.Text = "Usuários";
+            mnuRelatorioUsuarios.Click += mnuRelatorioUsuarios_Click;
             // 
             // mnuAjuda
             // 
@@ -93,8 +105,9 @@
             // mnuAjudaSobre
             // 
             mnuAjudaSobre.Name = "mnuAjudaSobre";
-            mnuAjudaSobre.Size = new Size(104, 22);
+            mnuAjudaSobre.Size = new Size(180, 22);
             mnuAjudaSobre.Text = "Sobre";
+            mnuAjudaSobre.Click += mnuAjudaSobre_Click;
             // 
             // staBarraEstado
             // 
@@ -118,6 +131,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(staBarraEstado);
             Controls.Add(menuStrip1);
+            IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
             Name = "Sistema";
             Text = "Sistema";
@@ -136,10 +150,11 @@
         private ToolStripMenuItem mnuArquivoSair;
         private ToolStripMenuItem mnuCadastro;
         private ToolStripMenuItem mnuCadastroUsuario;
-        private ToolStripMenuItem toolStripMenuItem1;
-        private ToolStripMenuItem mnuAjuda;
-        private ToolStripMenuItem mnuAjudaSobre;
+        private ToolStripMenuItem mnuRelatorio;
         private StatusStrip staBarraEstado;
         private ToolStripStatusLabel staBarraEstadoUltimoAcesso;
+        private ToolStripMenuItem mnuAjuda;
+        private ToolStripMenuItem mnuAjudaSobre;
+        private ToolStripMenuItem mnuRelatorioUsuarios;
     }
 }
