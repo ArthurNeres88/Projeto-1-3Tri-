@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System.Runtime.CompilerServices;
 
 namespace Trabalho1_ProgVis
 {
@@ -18,8 +19,27 @@ namespace Trabalho1_ProgVis
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Credencial> Credenciais { get; set; }
 
-        public Repository() => this.Database.EnsureCreated();
+        public Repository()
+        {
+            if (Database.EnsureCreated())
+            {
+                Credencial adminCredencial = new Credencial()
+                {
+                    NomeUsuario = "Admin",
+                    Senha = "Senha",
+                    Gerente = true
+                };
+                Usuario usuarioAdmin = new Usuario()
+                {
+                    Nome = "Admin",
+                    Telefone = "12345678911",
+                    Email = "admin@gmail.com",
+                    Credencial = adminCredencial
+                };
 
+                UsuarioRepository.SaveOrUpdate(usuarioAdmin);
+            }
+        }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);

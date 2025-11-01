@@ -34,9 +34,7 @@ namespace Trabalho1_ProgVis
                 _senha = ComputeSHA256(value, SALT);
             }
         }
-
-        public bool Administrador { get; set; }
-
+        public bool Gerente { get; set; }
 
         public Usuario Usuario { get; set; }
 
