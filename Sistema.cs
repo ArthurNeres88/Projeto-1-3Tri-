@@ -16,7 +16,7 @@ namespace Trabalho1_ProgVis
         private static Sistema _instance;
 
         #region SingleTon
-        public static Sistema GetInstance()
+        public static Sistema GetInstance(Usuario usuarioInstance)
         {
             if (_instance == null || _instance.IsDisposed)
             {
@@ -37,6 +37,7 @@ namespace Trabalho1_ProgVis
         private void mnuArquivoSair_Click(object sender, EventArgs e)
         {
             Close();
+            Login.GetInstance().Show(); 
         }
 
         private void mnuCadastroUsuario_Click(object sender, EventArgs e)
