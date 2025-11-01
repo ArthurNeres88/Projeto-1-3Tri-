@@ -81,5 +81,20 @@ namespace Trabalho1_ProgVis
                 throw;
             }
         }
+
+        public static List<Credencial> FindAllWithUsuario()
+        {
+            try
+            {
+                using (Repository dbContext = new Repository())
+                {
+                    return dbContext.Credenciais.Include("Usuario").ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

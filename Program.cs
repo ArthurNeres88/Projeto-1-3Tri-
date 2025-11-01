@@ -35,7 +35,7 @@ namespace Trabalho1_ProgVis
 
 
             ApplicationConfiguration.Initialize();
-            Application.Run(Sistema.GetInstance());
+            Application.Run(Login.GetInstance());
 
         }
     }
