@@ -29,51 +29,49 @@
         private void InitializeComponent()
         {
             pnlListaUsuarios = new Panel();
-            lstUsuarios = new ListBox();
+            lblNome = new Label();
             maskedTextBox1 = new MaskedTextBox();
+            lstUsuarios = new ListBox();
             chkPerfil = new CheckBox();
             lblSenha = new Label();
-            txtSenha = new TextBox();
-            lblNomeUsuario = new Label();
-            txtNomeUsuario = new TextBox();
-            lblTelefone = new Label();
-            lblEmail = new Label();
-            lblNome = new Label();
-            txtNome = new TextBox();
             txtEmail = new TextBox();
+            txtSenha = new TextBox();
+            lblNomeDefault = new Label();
+            lblNomeUsuarioDefault = new Label();
+            lblEmail = new Label();
+            lblTelefone = new Label();
+            lblNomeUsuario = new Label();
             pnlListaUsuarios.SuspendLayout();
             SuspendLayout();
             // 
             // pnlListaUsuarios
             // 
             pnlListaUsuarios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pnlListaUsuarios.Controls.Add(lblNomeUsuario);
+            pnlListaUsuarios.Controls.Add(lblNome);
             pnlListaUsuarios.Controls.Add(maskedTextBox1);
             pnlListaUsuarios.Controls.Add(lstUsuarios);
             pnlListaUsuarios.Controls.Add(chkPerfil);
-            pnlListaUsuarios.Controls.Add(txtNome);
             pnlListaUsuarios.Controls.Add(lblSenha);
             pnlListaUsuarios.Controls.Add(txtEmail);
             pnlListaUsuarios.Controls.Add(txtSenha);
-            pnlListaUsuarios.Controls.Add(lblNome);
-            pnlListaUsuarios.Controls.Add(lblNomeUsuario);
+            pnlListaUsuarios.Controls.Add(lblNomeDefault);
+            pnlListaUsuarios.Controls.Add(lblNomeUsuarioDefault);
             pnlListaUsuarios.Controls.Add(lblEmail);
-            pnlListaUsuarios.Controls.Add(txtNomeUsuario);
             pnlListaUsuarios.Controls.Add(lblTelefone);
             pnlListaUsuarios.Location = new Point(12, 12);
             pnlListaUsuarios.Name = "pnlListaUsuarios";
             pnlListaUsuarios.Size = new Size(606, 341);
             pnlListaUsuarios.TabIndex = 0;
             // 
-            // lstUsuarios
+            // lblNome
             // 
-            lstUsuarios.BackColor = Color.FromArgb(128, 128, 255);
-            lstUsuarios.FormattingEnabled = true;
-            lstUsuarios.ItemHeight = 15;
-            lstUsuarios.Location = new Point(3, 3);
-            lstUsuarios.Name = "lstUsuarios";
-            lstUsuarios.Size = new Size(245, 304);
-            lstUsuarios.TabIndex = 0;
-            lstUsuarios.Tag = "Lista de Usuários";
+            lblNome.AutoSize = true;
+            lblNome.Location = new Point(250, 30);
+            lblNome.Name = "lblNome";
+            lblNome.Size = new Size(40, 15);
+            lblNome.TabIndex = 24;
+            lblNome.Text = "Nome\r\n";
             // 
             // maskedTextBox1
             // 
@@ -83,6 +81,19 @@
             maskedTextBox1.Name = "maskedTextBox1";
             maskedTextBox1.Size = new Size(335, 32);
             maskedTextBox1.TabIndex = 23;
+            // 
+            // lstUsuarios
+            // 
+            lstUsuarios.BackColor = SystemColors.MenuHighlight;
+            lstUsuarios.Font = new Font("Segoe UI", 14F);
+            lstUsuarios.ForeColor = SystemColors.Window;
+            lstUsuarios.FormattingEnabled = true;
+            lstUsuarios.ItemHeight = 25;
+            lstUsuarios.Location = new Point(3, 3);
+            lstUsuarios.Name = "lstUsuarios";
+            lstUsuarios.Size = new Size(245, 304);
+            lstUsuarios.TabIndex = 0;
+            lstUsuarios.Tag = "Lista de Usuários";
             // 
             // chkPerfil
             // 
@@ -103,6 +114,14 @@
             lblSenha.TabIndex = 21;
             lblSenha.Text = "Senha";
             // 
+            // txtEmail
+            // 
+            txtEmail.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEmail.Location = new Point(254, 141);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(335, 33);
+            txtEmail.TabIndex = 13;
+            // 
             // txtSenha
             // 
             txtSenha.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -111,31 +130,23 @@
             txtSenha.Size = new Size(335, 33);
             txtSenha.TabIndex = 20;
             // 
-            // lblNomeUsuario
+            // lblNomeDefault
             // 
-            lblNomeUsuario.AutoSize = true;
-            lblNomeUsuario.Location = new Point(250, 60);
-            lblNomeUsuario.Name = "lblNomeUsuario";
-            lblNomeUsuario.Size = new Size(99, 15);
-            lblNomeUsuario.TabIndex = 19;
-            lblNomeUsuario.Text = "Nome de Usuário";
+            lblNomeDefault.AutoSize = true;
+            lblNomeDefault.Location = new Point(250, 6);
+            lblNomeDefault.Name = "lblNomeDefault";
+            lblNomeDefault.Size = new Size(40, 15);
+            lblNomeDefault.TabIndex = 15;
+            lblNomeDefault.Text = "Nome\r\n";
             // 
-            // txtNomeUsuario
+            // lblNomeUsuarioDefault
             // 
-            txtNomeUsuario.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNomeUsuario.Location = new Point(254, 78);
-            txtNomeUsuario.Name = "txtNomeUsuario";
-            txtNomeUsuario.Size = new Size(335, 33);
-            txtNomeUsuario.TabIndex = 18;
-            // 
-            // lblTelefone
-            // 
-            lblTelefone.AutoSize = true;
-            lblTelefone.Location = new Point(254, 179);
-            lblTelefone.Name = "lblTelefone";
-            lblTelefone.Size = new Size(52, 15);
-            lblTelefone.TabIndex = 17;
-            lblTelefone.Text = "Telefone";
+            lblNomeUsuarioDefault.AutoSize = true;
+            lblNomeUsuarioDefault.Location = new Point(250, 60);
+            lblNomeUsuarioDefault.Name = "lblNomeUsuarioDefault";
+            lblNomeUsuarioDefault.Size = new Size(99, 15);
+            lblNomeUsuarioDefault.TabIndex = 19;
+            lblNomeUsuarioDefault.Text = "Nome de Usuário";
             // 
             // lblEmail
             // 
@@ -146,30 +157,23 @@
             lblEmail.TabIndex = 16;
             lblEmail.Text = "Email";
             // 
-            // lblNome
+            // lblTelefone
             // 
-            lblNome.AutoSize = true;
-            lblNome.Location = new Point(250, 6);
-            lblNome.Name = "lblNome";
-            lblNome.Size = new Size(40, 15);
-            lblNome.TabIndex = 15;
-            lblNome.Text = "Nome\r\n";
+            lblTelefone.AutoSize = true;
+            lblTelefone.Location = new Point(254, 179);
+            lblTelefone.Name = "lblTelefone";
+            lblTelefone.Size = new Size(52, 15);
+            lblTelefone.TabIndex = 17;
+            lblTelefone.Text = "Telefone";
             // 
-            // txtNome
+            // lblNomeUsuario
             // 
-            txtNome.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNome.Location = new Point(254, 24);
-            txtNome.Name = "txtNome";
-            txtNome.Size = new Size(335, 33);
-            txtNome.TabIndex = 14;
-            // 
-            // txtEmail
-            // 
-            txtEmail.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtEmail.Location = new Point(254, 141);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(335, 33);
-            txtEmail.TabIndex = 13;
+            lblNomeUsuario.AutoSize = true;
+            lblNomeUsuario.Location = new Point(250, 91);
+            lblNomeUsuario.Name = "lblNomeUsuario";
+            lblNomeUsuario.Size = new Size(99, 15);
+            lblNomeUsuario.TabIndex = 25;
+            lblNomeUsuario.Text = "Nome de Usuário";
             // 
             // ListaUsuarios
             // 
@@ -194,10 +198,11 @@
         private Label lblSenha;
         private TextBox txtEmail;
         private TextBox txtSenha;
+        private Label lblNomeDefault;
+        private Label lblNomeUsuarioDefault;
+        private Label lblEmail;
+        private Label lblTelefone;
         private Label lblNome;
         private Label lblNomeUsuario;
-        private Label lblEmail;
-        private TextBox txtNomeUsuario;
-        private Label lblTelefone;
     }
 }
