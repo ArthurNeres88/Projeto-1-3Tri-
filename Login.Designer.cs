@@ -94,6 +94,7 @@
             txtSenha.PasswordChar = '●';
             txtSenha.Size = new Size(330, 43);
             txtSenha.TabIndex = 2;
+            txtSenha.TextChanged += txtSenha_TextChanged;
             txtSenha.KeyUp += txtSenha_KeyUp;
             // 
             // txtNomeUsuario
