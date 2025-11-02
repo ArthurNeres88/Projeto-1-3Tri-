@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sobre));
             lblIdentificacao = new Label();
             pnlSobre = new Panel();
             lblOferece = new Label();
@@ -159,6 +160,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(711, 382);
             Controls.Add(pnlSobre);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "Sobre";
             Text = "Sobre";

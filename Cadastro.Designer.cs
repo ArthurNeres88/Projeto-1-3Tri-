@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro));
             panel1 = new Panel();
+            label1 = new Label();
             lblAvisoSucesso = new Label();
             lblAvisoUsuario = new Label();
             lblAvisoVazio = new Label();
@@ -44,7 +46,6 @@
             txtNome = new TextBox();
             txtEmail = new TextBox();
             btnCadastrar = new Button();
-            label1 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -71,6 +72,17 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(498, 458);
             panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Noto Sans", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.MenuHighlight;
+            label1.Location = new Point(96, 6);
+            label1.Name = "label1";
+            label1.Size = new Size(305, 49);
+            label1.TabIndex = 16;
+            label1.Text = "Faça seu cadastro";
             // 
             // lblAvisoSucesso
             // 
@@ -230,23 +242,14 @@
             btnCadastrar.UseVisualStyleBackColor = false;
             btnCadastrar.Click += btnCadastrar_Click;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Noto Sans", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.MenuHighlight;
-            label1.Location = new Point(96, 6);
-            label1.Name = "label1";
-            label1.Size = new Size(305, 49);
-            label1.TabIndex = 16;
-            label1.Text = "Faça seu cadastro";
-            // 
             // Cadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(506, 462);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "Cadastro";
             Text = "Cadastro";

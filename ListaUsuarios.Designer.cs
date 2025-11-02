@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaUsuarios));
             pnlListaUsuarios = new Panel();
+            lblTitulo = new Label();
             lblUltimoAcessoDefault = new Label();
             lblUltimoAcesso = new Label();
             lblPerfilDefault = new Label();
@@ -42,7 +44,6 @@
             lblNomeUsuarioDefault = new Label();
             lblEmail = new Label();
             lblTelefone = new Label();
-            lblTitulo = new Label();
             pnlListaUsuarios.SuspendLayout();
             SuspendLayout();
             // 
@@ -67,6 +68,17 @@
             pnlListaUsuarios.Name = "pnlListaUsuarios";
             pnlListaUsuarios.Size = new Size(563, 483);
             pnlListaUsuarios.TabIndex = 0;
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Noto Sans", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.ForeColor = SystemColors.MenuHighlight;
+            lblTitulo.Location = new Point(133, 10);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(294, 49);
+            lblTitulo.TabIndex = 33;
+            lblTitulo.Text = "Lista de Usuários";
             // 
             // lblUltimoAcessoDefault
             // 
@@ -214,23 +226,14 @@
             lblTelefone.TabIndex = 17;
             lblTelefone.Text = "Telefone:";
             // 
-            // lblTitulo
-            // 
-            lblTitulo.AutoSize = true;
-            lblTitulo.Font = new Font("Noto Sans", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.ForeColor = SystemColors.MenuHighlight;
-            lblTitulo.Location = new Point(133, 10);
-            lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(294, 49);
-            lblTitulo.TabIndex = 33;
-            lblTitulo.Text = "Lista de Usuários";
-            // 
             // ListaUsuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(587, 507);
             Controls.Add(pnlListaUsuarios);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ListaUsuarios";
             Text = "ListaUsuarios";
             pnlListaUsuarios.ResumeLayout(false);

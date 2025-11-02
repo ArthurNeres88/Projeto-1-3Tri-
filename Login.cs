@@ -79,7 +79,6 @@ namespace Trabalho1_ProgVis
         }
         private void txtSenha_TextChanged(object sender, EventArgs e)
         {
-            lblSenha.Visible = false;
         }
     }
 }
