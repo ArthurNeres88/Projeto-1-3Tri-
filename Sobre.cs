@@ -30,5 +30,20 @@ namespace Trabalho1_ProgVis
         {
             InitializeComponent();
         }
+
+        private void pnlSobre_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblInformações_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblIdentificacao_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
