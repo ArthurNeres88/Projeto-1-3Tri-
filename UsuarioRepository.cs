@@ -49,13 +49,43 @@ namespace Trabalho1_ProgVis
             }
         }
 
-        public static Usuario FindById(Int64 id)
+        public static Usuario? FindById(UInt64 id)
         {
             try
             {
                 using (Repository dbContext = new Repository())
                 {
                     return dbContext.Usuarios.Find(id);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static Usuario? FindByIdWithCredencial(UInt64 id)
+        {
+            try
+            {
+                using (Repository dbContext = new Repository())
+                {
+                    return dbContext.Usuarios.Include(u => u.Credencial).FirstOrDefault(u => u.Id == id);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static List<Usuario> FindAllWithCredencial()
+        {
+            try
+            {
+                using (Repository dbContext = new Repository())
+                {
+                    return dbContext.Usuarios.Include("Credencial").ToList();
                 }
             }
             catch (Exception)

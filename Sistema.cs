@@ -13,32 +13,52 @@ namespace Trabalho1_ProgVis
     public partial class Sistema : Form
     {
 
-        private static Sistema _instance;
+        private static Sistema? _instance;
+
+        private Credencial? _credencial;
+
+
+        private Sistema(Usuario usuario)
+        {
+            InitializeComponent();
+
+            Text = "Sistema /" + usuario.Nome;
+            mnuCadastro.Enabled = usuario.Credencial.Perfil;
+
+            if (usuario.Credencial.UltimoAcesso == DateTime.MinValue) 
+                staBarraEstadoUltimoAcesso.Visible = false;
+
+            _credencial = UsuarioRepository.FindByIdWithCredencial(usuario.Id)?.Credencial;
+
+            staBarraEstadoUltimoAcesso.Text = $"Último Acesso: {_credencial.UltimoAcesso}";           
+
+        }
 
         #region SingleTon
-        public static Sistema GetInstance(Usuario usuarioInstance)
+        public static Sistema GetInstance(Usuario usuario)
         {
             if (_instance == null || _instance.IsDisposed)
             {
-                _instance = new Sistema();
+                _instance = new Sistema(usuario);
             }
 
             return _instance;
         }
         #endregion
-
-        private Sistema()
+        
+        private void Sistema_FormClosed(object sender, FormClosedEventArgs e)
         {
-            InitializeComponent();
-
-
+            Login.GetInstance().Show();
+            _credencial.UltimoAcesso = DateTime.Now;
+            CredencialRepository.SaveOrUpdate(_credencial);
         }
 
         private void mnuArquivoSair_Click(object sender, EventArgs e)
         {
             Close();
-            Login.GetInstance().Show(); 
+            Login.GetInstance().Show();
         }
+
 
         private void mnuCadastroUsuario_Click(object sender, EventArgs e)
         {
@@ -69,5 +89,6 @@ namespace Trabalho1_ProgVis
 
             listaUsuarios.Show();
         }
+
     }
 }

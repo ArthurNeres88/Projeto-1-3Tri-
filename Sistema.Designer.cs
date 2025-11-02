@@ -49,7 +49,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { mnuArquivo, mnuCadastro, mnuRelatorio, mnuAjuda });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 24);
+            menuStrip1.Size = new Size(845, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -91,7 +91,7 @@
             // mnuRelatorioUsuarios
             // 
             mnuRelatorioUsuarios.Name = "mnuRelatorioUsuarios";
-            mnuRelatorioUsuarios.Size = new Size(180, 22);
+            mnuRelatorioUsuarios.Size = new Size(119, 22);
             mnuRelatorioUsuarios.Text = "Usuários";
             mnuRelatorioUsuarios.Click += mnuRelatorioUsuarios_Click;
             // 
@@ -105,16 +105,16 @@
             // mnuAjudaSobre
             // 
             mnuAjudaSobre.Name = "mnuAjudaSobre";
-            mnuAjudaSobre.Size = new Size(180, 22);
+            mnuAjudaSobre.Size = new Size(104, 22);
             mnuAjudaSobre.Text = "Sobre";
             mnuAjudaSobre.Click += mnuAjudaSobre_Click;
             // 
             // staBarraEstado
             // 
             staBarraEstado.Items.AddRange(new ToolStripItem[] { staBarraEstadoUltimoAcesso });
-            staBarraEstado.Location = new Point(0, 428);
+            staBarraEstado.Location = new Point(0, 508);
             staBarraEstado.Name = "staBarraEstado";
-            staBarraEstado.Size = new Size(800, 22);
+            staBarraEstado.Size = new Size(845, 22);
             staBarraEstado.TabIndex = 1;
             staBarraEstado.Text = "statusStrip1";
             // 
@@ -128,13 +128,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(845, 530);
             Controls.Add(staBarraEstado);
             Controls.Add(menuStrip1);
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
             Name = "Sistema";
             Text = "Sistema";
+            FormClosed += Sistema_FormClosed;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             staBarraEstado.ResumeLayout(false);

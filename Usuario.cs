@@ -12,7 +12,7 @@ namespace Trabalho1_ProgVis
     public class Usuario
     {
         [Key]
-        public Int64  Id { get; set; }
+        public UInt64  Id { get; set; }
         
         [Required]
         [StringLength(45)]
@@ -33,10 +33,7 @@ namespace Trabalho1_ProgVis
         public override string ToString()
         {
             return Id
-                + " - " + Nome
-                + " - " + Telefone
-                + " - " + Email
-                + " - " + Credencial;
+                + " - " + Nome;
         }
     }
 }

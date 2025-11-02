@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            label1 = new Label();
-            maskedTextBox1 = new MaskedTextBox();
+            lblAvisoSucesso = new Label();
+            lblAvisoUsuario = new Label();
+            lblAvisoVazio = new Label();
+            mskTelefone = new MaskedTextBox();
             chkPerfil = new CheckBox();
             lblSenha = new Label();
             txtSenha = new TextBox();
@@ -48,8 +50,10 @@
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(maskedTextBox1);
+            panel1.Controls.Add(lblAvisoSucesso);
+            panel1.Controls.Add(lblAvisoUsuario);
+            panel1.Controls.Add(lblAvisoVazio);
+            panel1.Controls.Add(mskTelefone);
             panel1.Controls.Add(chkPerfil);
             panel1.Controls.Add(lblSenha);
             panel1.Controls.Add(txtSenha);
@@ -63,30 +67,58 @@
             panel1.Controls.Add(btnCadastrar);
             panel1.Location = new Point(4, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(355, 408);
+            panel1.Size = new Size(498, 408);
             panel1.TabIndex = 0;
             // 
-            // label1
+            // lblAvisoSucesso
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Yellow;
-            label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Red;
-            label1.Location = new Point(4, 331);
-            label1.Name = "label1";
-            label1.Size = new Size(217, 20);
-            label1.TabIndex = 13;
-            label1.Text = "Os campos estão incompletos";
-            label1.Visible = false;
+            lblAvisoSucesso.AutoSize = true;
+            lblAvisoSucesso.BackColor = Color.Green;
+            lblAvisoSucesso.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAvisoSucesso.ForeColor = SystemColors.ControlLightLight;
+            lblAvisoSucesso.Location = new Point(8, 377);
+            lblAvisoSucesso.Name = "lblAvisoSucesso";
+            lblAvisoSucesso.Size = new Size(202, 20);
+            lblAvisoSucesso.TabIndex = 15;
+            lblAvisoSucesso.Text = "Usuário criado com sucesso";
+            lblAvisoSucesso.Visible = false;
             // 
-            // maskedTextBox1
+            // lblAvisoUsuario
             // 
-            maskedTextBox1.Font = new Font("Segoe UI", 14F);
-            maskedTextBox1.Location = new Point(8, 206);
-            maskedTextBox1.Mask = "(00) 00000-0000";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(335, 32);
-            maskedTextBox1.TabIndex = 12;
+            lblAvisoUsuario.AutoSize = true;
+            lblAvisoUsuario.BackColor = Color.Yellow;
+            lblAvisoUsuario.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAvisoUsuario.ForeColor = Color.Red;
+            lblAvisoUsuario.Location = new Point(8, 354);
+            lblAvisoUsuario.Name = "lblAvisoUsuario";
+            lblAvisoUsuario.Size = new Size(215, 20);
+            lblAvisoUsuario.TabIndex = 14;
+            lblAvisoUsuario.Text = "Nome de Usuário já existente";
+            lblAvisoUsuario.Visible = false;
+            // 
+            // lblAvisoVazio
+            // 
+            lblAvisoVazio.AutoSize = true;
+            lblAvisoVazio.BackColor = Color.Yellow;
+            lblAvisoVazio.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAvisoVazio.ForeColor = Color.Red;
+            lblAvisoVazio.Location = new Point(8, 331);
+            lblAvisoVazio.Name = "lblAvisoVazio";
+            lblAvisoVazio.Size = new Size(217, 20);
+            lblAvisoVazio.TabIndex = 13;
+            lblAvisoVazio.Text = "Os campos estão incompletos";
+            lblAvisoVazio.Visible = false;
+            // 
+            // mskTelefone
+            // 
+            mskTelefone.Font = new Font("Segoe UI", 14F);
+            mskTelefone.Location = new Point(8, 206);
+            mskTelefone.Mask = "(00) 00000-0000";
+            mskTelefone.Name = "mskTelefone";
+            mskTelefone.Size = new Size(478, 32);
+            mskTelefone.TabIndex = 12;
+            mskTelefone.TextChanged += mskTelefone_TextChanged;
+            mskTelefone.KeyUp += mskTelefone_KeyUp;
             // 
             // chkPerfil
             // 
@@ -112,8 +144,10 @@
             txtSenha.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtSenha.Location = new Point(8, 266);
             txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(335, 33);
+            txtSenha.Size = new Size(478, 33);
             txtSenha.TabIndex = 9;
+            txtSenha.TextChanged += txtSenha_TextChanged;
+            txtSenha.KeyUp += txtSenha_KeyUp;
             // 
             // lblNomeUsuario
             // 
@@ -129,8 +163,10 @@
             txtNomeUsuario.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNomeUsuario.Location = new Point(8, 87);
             txtNomeUsuario.Name = "txtNomeUsuario";
-            txtNomeUsuario.Size = new Size(335, 33);
+            txtNomeUsuario.Size = new Size(478, 33);
             txtNomeUsuario.TabIndex = 7;
+            txtNomeUsuario.TextChanged += txtNomeUsuario_TextChanged;
+            txtNomeUsuario.KeyUp += txtNomeUsuario_KeyUp;
             // 
             // lblTelefone
             // 
@@ -164,34 +200,39 @@
             txtNome.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNome.Location = new Point(8, 33);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(335, 33);
+            txtNome.Size = new Size(478, 33);
             txtNome.TabIndex = 2;
+            txtNome.TextChanged += txtNome_TextChanged;
+            txtNome.KeyUp += txtNome_KeyUp;
             // 
             // txtEmail
             // 
             txtEmail.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtEmail.Location = new Point(8, 150);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(335, 33);
+            txtEmail.Size = new Size(478, 33);
             txtEmail.TabIndex = 1;
+            txtEmail.TextChanged += txtEmail_TextChanged;
+            txtEmail.KeyUp += txtEmail_KeyUp;
             // 
             // btnCadastrar
             // 
             btnCadastrar.BackColor = SystemColors.MenuHighlight;
             btnCadastrar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCadastrar.ForeColor = SystemColors.ButtonHighlight;
-            btnCadastrar.Location = new Point(174, 354);
+            btnCadastrar.Location = new Point(317, 354);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(169, 43);
             btnCadastrar.TabIndex = 0;
             btnCadastrar.Text = "Cadastrar";
             btnCadastrar.UseVisualStyleBackColor = false;
+            btnCadastrar.Click += btnCadastrar_Click;
             // 
             // Cadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(363, 412);
+            ClientSize = new Size(506, 412);
             Controls.Add(panel1);
             Name = "Cadastro";
             Text = "Cadastro";
@@ -214,7 +255,9 @@
         private Label lblSenha;
         private TextBox txtSenha;
         private CheckBox chkPerfil;
-        private MaskedTextBox maskedTextBox1;
-        private Label label1;
+        private MaskedTextBox mskTelefone;
+        private Label lblAvisoVazio;
+        private Label lblAvisoUsuario;
+        private Label lblAvisoSucesso;
     }
 }

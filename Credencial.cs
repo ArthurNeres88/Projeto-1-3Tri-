@@ -11,9 +11,10 @@ using System.Security.Cryptography;
 
 namespace Trabalho1_ProgVis
 {
+    [Table("Credenciais")]
     public class Credencial
     {
-        public Int64 Id { get; set; }
+        public UInt64 Id { get; set; }
 
         public const String SALT = "1FnM6_";
 
@@ -34,9 +35,11 @@ namespace Trabalho1_ProgVis
                 _senha = ComputeSHA256(value, SALT);
             }
         }
-        public bool Gerente { get; set; }
+        public Boolean Perfil { get; set; }
 
         public Usuario Usuario { get; set; }
+
+        public DateTime UltimoAcesso { get; set; }
 
         #region Hashing
         public static String ComputeSHA256(String input)

@@ -27,7 +27,7 @@ namespace Trabalho1_ProgVis
                 {
                     NomeUsuario = "Admin",
                     Senha = "Senha",
-                    Gerente = true
+                    Perfil = true
                 };
                 Usuario usuarioAdmin = new Usuario()
                 {
