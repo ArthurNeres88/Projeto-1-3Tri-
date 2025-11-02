@@ -70,7 +70,6 @@ namespace Trabalho1_ProgVis
 
                         break;
                     }
-
                 }
             }
         }

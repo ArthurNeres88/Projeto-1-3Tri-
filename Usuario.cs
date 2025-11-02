@@ -33,7 +33,7 @@ namespace Trabalho1_ProgVis
         public override string ToString()
         {
             return Id
-                + " - " + Nome;
+                + " - " + Credencial.NomeUsuario;
         }
     }
 }
