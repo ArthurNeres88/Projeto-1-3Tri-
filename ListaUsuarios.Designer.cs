@@ -42,12 +42,14 @@
             lblNomeUsuarioDefault = new Label();
             lblEmail = new Label();
             lblTelefone = new Label();
+            lblTitulo = new Label();
             pnlListaUsuarios.SuspendLayout();
             SuspendLayout();
             // 
             // pnlListaUsuarios
             // 
             pnlListaUsuarios.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pnlListaUsuarios.Controls.Add(lblTitulo);
             pnlListaUsuarios.Controls.Add(lblUltimoAcessoDefault);
             pnlListaUsuarios.Controls.Add(lblUltimoAcesso);
             pnlListaUsuarios.Controls.Add(lblPerfilDefault);
@@ -63,7 +65,7 @@
             pnlListaUsuarios.Controls.Add(lblTelefone);
             pnlListaUsuarios.Location = new Point(12, 12);
             pnlListaUsuarios.Name = "pnlListaUsuarios";
-            pnlListaUsuarios.Size = new Size(563, 482);
+            pnlListaUsuarios.Size = new Size(563, 483);
             pnlListaUsuarios.TabIndex = 0;
             // 
             // lblUltimoAcessoDefault
@@ -71,7 +73,7 @@
             lblUltimoAcessoDefault.AutoSize = true;
             lblUltimoAcessoDefault.BackColor = SystemColors.ControlLightLight;
             lblUltimoAcessoDefault.Font = new Font("Segoe UI", 14F);
-            lblUltimoAcessoDefault.Location = new Point(250, 379);
+            lblUltimoAcessoDefault.Location = new Point(262, 451);
             lblUltimoAcessoDefault.Name = "lblUltimoAcessoDefault";
             lblUltimoAcessoDefault.Size = new Size(283, 25);
             lblUltimoAcessoDefault.TabIndex = 32;
@@ -82,7 +84,7 @@
             lblUltimoAcesso.AutoSize = true;
             lblUltimoAcesso.BackColor = SystemColors.ActiveCaption;
             lblUltimoAcesso.Font = new Font("Segoe UI", 14F);
-            lblUltimoAcesso.Location = new Point(250, 354);
+            lblUltimoAcesso.Location = new Point(262, 426);
             lblUltimoAcesso.Name = "lblUltimoAcesso";
             lblUltimoAcesso.Size = new Size(135, 25);
             lblUltimoAcesso.TabIndex = 31;
@@ -93,7 +95,7 @@
             lblPerfilDefault.AutoSize = true;
             lblPerfilDefault.BackColor = SystemColors.ControlLightLight;
             lblPerfilDefault.Font = new Font("Segoe UI", 14F);
-            lblPerfilDefault.Location = new Point(250, 307);
+            lblPerfilDefault.Location = new Point(258, 376);
             lblPerfilDefault.Name = "lblPerfilDefault";
             lblPerfilDefault.Size = new Size(283, 25);
             lblPerfilDefault.TabIndex = 30;
@@ -104,7 +106,7 @@
             lblPerfil.AutoSize = true;
             lblPerfil.BackColor = SystemColors.ActiveCaption;
             lblPerfil.Font = new Font("Segoe UI", 14F);
-            lblPerfil.Location = new Point(250, 282);
+            lblPerfil.Location = new Point(258, 351);
             lblPerfil.Name = "lblPerfil";
             lblPerfil.Size = new Size(59, 25);
             lblPerfil.TabIndex = 29;
@@ -115,7 +117,7 @@
             lblTelefoneDefault.AutoSize = true;
             lblTelefoneDefault.BackColor = SystemColors.ControlLightLight;
             lblTelefoneDefault.Font = new Font("Segoe UI", 14F);
-            lblTelefoneDefault.Location = new Point(250, 236);
+            lblTelefoneDefault.Location = new Point(258, 305);
             lblTelefoneDefault.Name = "lblTelefoneDefault";
             lblTelefoneDefault.Size = new Size(283, 25);
             lblTelefoneDefault.TabIndex = 28;
@@ -126,7 +128,7 @@
             lblEmailDefault.AutoSize = true;
             lblEmailDefault.BackColor = SystemColors.ControlLightLight;
             lblEmailDefault.Font = new Font("Segoe UI", 14F);
-            lblEmailDefault.Location = new Point(250, 160);
+            lblEmailDefault.Location = new Point(258, 229);
             lblEmailDefault.Name = "lblEmailDefault";
             lblEmailDefault.Size = new Size(283, 25);
             lblEmailDefault.TabIndex = 27;
@@ -137,7 +139,7 @@
             lblNomeDefault.AutoSize = true;
             lblNomeDefault.BackColor = SystemColors.ControlLightLight;
             lblNomeDefault.Font = new Font("Segoe UI", 14F);
-            lblNomeDefault.Location = new Point(250, 28);
+            lblNomeDefault.Location = new Point(258, 97);
             lblNomeDefault.Name = "lblNomeDefault";
             lblNomeDefault.Size = new Size(283, 25);
             lblNomeDefault.TabIndex = 26;
@@ -148,7 +150,7 @@
             lblNomeUsuario.AutoSize = true;
             lblNomeUsuario.BackColor = SystemColors.ActiveCaption;
             lblNomeUsuario.Font = new Font("Segoe UI", 14F);
-            lblNomeUsuario.Location = new Point(250, 68);
+            lblNomeUsuario.Location = new Point(258, 137);
             lblNomeUsuario.Name = "lblNomeUsuario";
             lblNomeUsuario.Size = new Size(168, 25);
             lblNomeUsuario.TabIndex = 25;
@@ -161,7 +163,7 @@
             lstUsuarios.ForeColor = SystemColors.Window;
             lstUsuarios.FormattingEnabled = true;
             lstUsuarios.ItemHeight = 25;
-            lstUsuarios.Location = new Point(3, 3);
+            lstUsuarios.Location = new Point(11, 72);
             lstUsuarios.Name = "lstUsuarios";
             lstUsuarios.Size = new Size(245, 404);
             lstUsuarios.TabIndex = 0;
@@ -173,7 +175,7 @@
             lblNome.AutoSize = true;
             lblNome.BackColor = SystemColors.ActiveCaption;
             lblNome.Font = new Font("Segoe UI", 14F);
-            lblNome.Location = new Point(250, 3);
+            lblNome.Location = new Point(258, 72);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(67, 25);
             lblNome.TabIndex = 15;
@@ -184,7 +186,7 @@
             lblNomeUsuarioDefault.AutoSize = true;
             lblNomeUsuarioDefault.BackColor = SystemColors.ControlLightLight;
             lblNomeUsuarioDefault.Font = new Font("Segoe UI", 14F);
-            lblNomeUsuarioDefault.Location = new Point(250, 93);
+            lblNomeUsuarioDefault.Location = new Point(258, 162);
             lblNomeUsuarioDefault.Name = "lblNomeUsuarioDefault";
             lblNomeUsuarioDefault.Size = new Size(283, 25);
             lblNomeUsuarioDefault.TabIndex = 19;
@@ -195,7 +197,7 @@
             lblEmail.AutoSize = true;
             lblEmail.BackColor = SystemColors.ActiveCaption;
             lblEmail.Font = new Font("Segoe UI", 14F);
-            lblEmail.Location = new Point(250, 135);
+            lblEmail.Location = new Point(258, 204);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(62, 25);
             lblEmail.TabIndex = 16;
@@ -206,17 +208,28 @@
             lblTelefone.AutoSize = true;
             lblTelefone.BackColor = SystemColors.ActiveCaption;
             lblTelefone.Font = new Font("Segoe UI", 14F);
-            lblTelefone.Location = new Point(250, 202);
+            lblTelefone.Location = new Point(258, 271);
             lblTelefone.Name = "lblTelefone";
             lblTelefone.Size = new Size(87, 25);
             lblTelefone.TabIndex = 17;
             lblTelefone.Text = "Telefone:";
             // 
+            // lblTitulo
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Noto Sans", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.ForeColor = SystemColors.MenuHighlight;
+            lblTitulo.Location = new Point(133, 10);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(294, 49);
+            lblTitulo.TabIndex = 33;
+            lblTitulo.Text = "Lista de Usuários";
+            // 
             // ListaUsuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(587, 506);
+            ClientSize = new Size(587, 507);
             Controls.Add(pnlListaUsuarios);
             Name = "ListaUsuarios";
             Text = "ListaUsuarios";
@@ -242,5 +255,6 @@
         private Label lblPerfilDefault;
         private Label lblUltimoAcesso;
         private Label lblUltimoAcessoDefault;
+        private Label lblTitulo;
     }
 }
