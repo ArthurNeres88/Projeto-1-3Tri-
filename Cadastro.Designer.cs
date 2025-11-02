@@ -78,11 +78,11 @@
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Noto Sans", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = SystemColors.MenuHighlight;
-            lblTitulo.Location = new Point(96, 6);
+            lblTitulo.Location = new Point(29, 6);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(305, 49);
+            lblTitulo.Size = new Size(438, 49);
             lblTitulo.TabIndex = 16;
-            lblTitulo.Text = "Faça seu cadastro";
+            lblTitulo.Text = "Cadastre um novo usuário";
             // 
             // lblAvisoSucesso
             // 
