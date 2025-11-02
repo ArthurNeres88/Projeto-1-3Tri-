@@ -28,7 +28,6 @@ namespace Trabalho1_ProgVis
         {
             InitializeComponent();
         }
-
         private void txtNomeUsuario_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -51,7 +50,7 @@ namespace Trabalho1_ProgVis
                 foreach (Credencial u in _credenciais)
                 {
                     if (u.NomeUsuario == txtNomeUsuario.Text)
-                    {   
+                    {
                         if (u.Senha == Credencial.ComputeSHA256(txtSenha.Text, Credencial.SALT))
                         {
                             _usuarioInstance = u.Usuario;
@@ -77,7 +76,11 @@ namespace Trabalho1_ProgVis
         }
         private void txtNomeUsuario_TextChanged(object sender, EventArgs e)
         {
-
+            lblAviso.Visible = false;
+        }
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+            lblSenha.Visible = false;
         }
     }
 }
