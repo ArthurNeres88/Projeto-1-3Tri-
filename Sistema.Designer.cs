@@ -134,6 +134,7 @@
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
             Name = "Sistema";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Sistema";
             FormClosed += Sistema_FormClosed;
             menuStrip1.ResumeLayout(false);

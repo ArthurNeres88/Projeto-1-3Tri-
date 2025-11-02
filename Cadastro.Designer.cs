@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro));
             panel1 = new Panel();
-            label1 = new Label();
+            lblTitulo = new Label();
             lblAvisoSucesso = new Label();
             lblAvisoUsuario = new Label();
             lblAvisoVazio = new Label();
@@ -52,7 +52,7 @@
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(lblTitulo);
             panel1.Controls.Add(lblAvisoSucesso);
             panel1.Controls.Add(lblAvisoUsuario);
             panel1.Controls.Add(lblAvisoVazio);
@@ -73,16 +73,16 @@
             panel1.Size = new Size(498, 458);
             panel1.TabIndex = 0;
             // 
-            // label1
+            // lblTitulo
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Noto Sans", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.MenuHighlight;
-            label1.Location = new Point(96, 6);
-            label1.Name = "label1";
-            label1.Size = new Size(305, 49);
-            label1.TabIndex = 16;
-            label1.Text = "Faça seu cadastro";
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Noto Sans", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.ForeColor = SystemColors.MenuHighlight;
+            lblTitulo.Location = new Point(96, 6);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(305, 49);
+            lblTitulo.TabIndex = 16;
+            lblTitulo.Text = "Faça seu cadastro";
             // 
             // lblAvisoSucesso
             // 
@@ -252,6 +252,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "Cadastro";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -276,6 +277,6 @@
         private Label lblAvisoVazio;
         private Label lblAvisoUsuario;
         private Label lblAvisoSucesso;
-        private Label label1;
+        private Label lblTitulo;
     }
 }

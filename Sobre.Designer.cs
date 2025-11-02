@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sobre));
-            lblIdentificacao = new Label();
+            lblTitulo = new Label();
             pnlSobre = new Panel();
             lblOferece = new Label();
             lblOferecimentos = new Label();
@@ -42,18 +42,18 @@
             pnlSobre.SuspendLayout();
             SuspendLayout();
             // 
-            // lblIdentificacao
+            // lblTitulo
             // 
-            lblIdentificacao.AutoSize = true;
-            lblIdentificacao.BackColor = Color.Transparent;
-            lblIdentificacao.Font = new Font("Noto Sans", 21.7499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblIdentificacao.ForeColor = SystemColors.MenuHighlight;
-            lblIdentificacao.Location = new Point(15, 10);
-            lblIdentificacao.Name = "lblIdentificacao";
-            lblIdentificacao.Size = new Size(644, 44);
-            lblIdentificacao.TabIndex = 0;
-            lblIdentificacao.Text = "Sistema de Gestão de Usuários – Versão 1.0\n";
-            lblIdentificacao.Click += lblIdentificacao_Click;
+            lblTitulo.AutoSize = true;
+            lblTitulo.BackColor = Color.Transparent;
+            lblTitulo.Font = new Font("Noto Sans", 21.7499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.ForeColor = SystemColors.MenuHighlight;
+            lblTitulo.Location = new Point(15, 10);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(644, 44);
+            lblTitulo.TabIndex = 0;
+            lblTitulo.Text = "Sistema de Gestão de Usuários – Versão 1.0\n";
+            lblTitulo.Click += lblIdentificacao_Click;
             // 
             // pnlSobre
             // 
@@ -66,7 +66,7 @@
             pnlSobre.Controls.Add(lblAno);
             pnlSobre.Controls.Add(lblInstituicao);
             pnlSobre.Controls.Add(lblDesenvolvedores);
-            pnlSobre.Controls.Add(lblIdentificacao);
+            pnlSobre.Controls.Add(lblTitulo);
             pnlSobre.Location = new Point(12, 12);
             pnlSobre.Name = "pnlSobre";
             pnlSobre.Size = new Size(687, 358);
@@ -164,6 +164,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "Sobre";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Sobre";
             pnlSobre.ResumeLayout(false);
             pnlSobre.PerformLayout();
@@ -172,7 +173,7 @@
 
         #endregion
 
-        private Label lblIdentificacao;
+        private Label lblTitulo;
         private Panel pnlSobre;
         private Label lblDesenvolvedores;
         private Label lblDireitos;

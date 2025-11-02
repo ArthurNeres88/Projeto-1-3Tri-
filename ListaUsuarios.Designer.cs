@@ -72,11 +72,11 @@
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
-            lblTitulo.Font = new Font("Noto Sans", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.Font = new Font("Noto Sans", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = SystemColors.MenuHighlight;
-            lblTitulo.Location = new Point(133, 10);
+            lblTitulo.Location = new Point(119, 0);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(294, 49);
+            lblTitulo.Size = new Size(322, 53);
             lblTitulo.TabIndex = 33;
             lblTitulo.Text = "Lista de Usuários";
             // 
@@ -170,7 +170,7 @@
             // 
             // lstUsuarios
             // 
-            lstUsuarios.BackColor = SystemColors.MenuHighlight;
+            lstUsuarios.BackColor = SystemColors.ControlDark;
             lstUsuarios.Font = new Font("Segoe UI", 14F);
             lstUsuarios.ForeColor = SystemColors.Window;
             lstUsuarios.FormattingEnabled = true;
@@ -220,7 +220,7 @@
             lblTelefone.AutoSize = true;
             lblTelefone.BackColor = SystemColors.ActiveCaption;
             lblTelefone.Font = new Font("Segoe UI", 14F);
-            lblTelefone.Location = new Point(258, 271);
+            lblTelefone.Location = new Point(258, 280);
             lblTelefone.Name = "lblTelefone";
             lblTelefone.Size = new Size(87, 25);
             lblTelefone.TabIndex = 17;
@@ -235,6 +235,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ListaUsuarios";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ListaUsuarios";
             pnlListaUsuarios.ResumeLayout(false);
             pnlListaUsuarios.PerformLayout();
