@@ -14,7 +14,7 @@ namespace Trabalho1_ProgVis
 {
     public class Repository : DbContext
     {
-        private static readonly String _connectionParams = @"server=127.0.0.1;port=3307;uid=root;pwd=;database=Trabalho_Forms";
+        private static readonly String _connectionParams = @"server=127.0.0.1;port=3307;uid=root;pwd=;database=Projeto-1-3Tri";
 
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Credencial> Credenciais { get; set; }
